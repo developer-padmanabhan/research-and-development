@@ -11,7 +11,7 @@ CORS(app)
 
 @app.route('/',methods=['GET'])
 def hello():
-   return render_template('home.html)
+   return render_template('home.html')
 
 @app.route('/sendotp',methods=['POST'])
 def indexotp():
