@@ -1,5 +1,5 @@
 import json
-from flask import Flask,request, jsonify
+from flask import Flask,request, jsonify, render_template
 from flask_cors import CORS
 from otp_send import sendotp
 from otp_verify import verifyotp
@@ -11,7 +11,7 @@ CORS(app)
 
 @app.route('/',methods=['GET'])
 def hello():
-   return ("Application is working Fine")
+   return render_template('home.html)
 
 @app.route('/sendotp',methods=['POST'])
 def indexotp():
